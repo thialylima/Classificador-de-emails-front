@@ -34,3 +34,9 @@ async function enviarEmail() {
     respostaDiv.innerHTML = "❌ Erro ao conectar com o servidor.";
   }
 }
+
+document.getElementById('fileInput').addEventListener('change', function() {
+  const fileName = this.files.length > 0 ? this.files[0].name : 'Nenhum arquivo escolhido';
+  document.getElementById('fileName').textContent = fileName;
+});
+

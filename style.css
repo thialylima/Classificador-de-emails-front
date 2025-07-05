@@ -14,10 +14,19 @@ h1 {
   margin-bottom: 30px;
   color: #00ffe1;
   text-align: center;
+  text-shadow: 0 0 10px rgba(0, 255, 251, 0.295);
+
 }
 
 .container {
   display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.entrada {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 20px;
   width: 100%;
@@ -27,7 +36,7 @@ h1 {
 
 textarea,
 .output-box {
-  width: 48%;
+  width: 50%;
   height: 300px;
   padding: 15px;
   background-color: #1e1e1e;
@@ -41,7 +50,40 @@ textarea,
 
 .output-box {
   overflow-y: auto;
-  white-space: pre-wrap;
+}
+
+.file-upload {
+  margin-top: 10px;
+}
+
+.file-upload p {
+  margin: 0 0 8px 0;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  background-color: #00ffe1;
+  color: #000;
+  font-weight: bold;
+  padding: 3px 16px 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background-color: #7dfff0;
+  box-shadow: 0 0 10px rgba(85, 255, 252, 0.29);
+}
+
+.file-upload input[type="file"] {
+  display: none;
+}
+
+#fileName {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #027175;
 }
 
 button {
@@ -74,5 +116,12 @@ button:hover {
     width: 90%;
     height: 300px;
     font-size: 18px;
+  }
+
+  .file-upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
