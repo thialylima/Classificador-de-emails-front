@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Classificador de E-mails</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Classificador Inteligente de E-mails</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Classificador de E-mails</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Classificador Inteligente de E-mails</h1>
 
-  <div class="container">
-    <textarea id="emailInput" placeholder="Cole aqui o texto do e-mail recebido..."></textarea>
-    <div id="respostaOutput" class="output-box">
-      <em>Resultado aparecerá aqui...</em>
+    <div class="container">
+      <textarea
+        id="emailInput"
+        placeholder="Cole aqui o texto do e-mail recebido..."
+      ></textarea>
+
+      <p>Ou envie um arquivo (PDF ou TXT):</p>
+      <input type="file" id="fileInput" accept=".pdf,.txt" />
+
+      <div
+        id="respostaOutput"
+        class="output-box"
+        style="margin-top: 1em; min-height: 100px"
+      >
+        <em>Resultado aparecerá aqui...</em>
+      </div>
     </div>
-  </div>
 
-  <button onclick="enviarEmail()">Classificar e Gerar Resposta</button>
+    <button onclick="enviarEmail()">Classificar e Gerar Resposta</button>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
