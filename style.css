@@ -4,7 +4,6 @@ html, body {
 
 body {
   min-height: 100%;
-  position: relative;
   margin: 0;
   font-family: "Segoe UI", sans-serif;
   background: linear-gradient(135deg, #0d0d0d, #001315);
