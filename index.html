@@ -3,19 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Classificador de E-mails</title>
+    <title>InteliMail</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Classificador Inteligente de E-mails</h1>
-    <div class="entrada">
+    <h1>
+      InteliMail
+      <span id="btnInfo" class="info-circle" onclick="abrirModal()">ⓘ</span>
+    </h1>
+    <h2>Classificador Inteligente de E-mails</h2>
+    <div class="info-entry">
       <div class="container">
         <textarea
           id="emailInput"
           placeholder="Cole aqui o texto do e-mail recebido..."
         ></textarea>
 
-        <div id="respostaOutput" class="output-box box">
+        <div id="respostaOutput" class="output-box">
           <em>Resultado aparecerá aqui...</em>
         </div>
       </div>
@@ -31,6 +35,72 @@
 
     <div class="button-container">
       <button onclick="enviarEmail()">Classificar e Gerar Resposta</button>
+    </div>
+
+    <!-- Modal -->
+    <div id="infoModal" class="modal" onclick="fecharModal(event)">
+      <div class="modal-content">
+        <div class="fixed-button">
+          <span class="close" onclick="fecharModal()">&times;</span>
+        </div>
+        <h3>O que é o InteliMail?</h3>
+        <p>
+          O InteliMail é um sistema inteligente que analisa e-mails e/ou
+          arquivos em PDF/TXT e classifica seu conteúdo como
+          <strong>Produtivo</strong> ou <strong>Improdutivo</strong>.
+        </p>
+        <p>
+          Além disso, ele gera automaticamente uma resposta profissional com
+          base no conteúdo, como se fosse escrita por um atendente da empresa.
+        </p>
+
+        <h4>Por que o InteliMail foi criado?</h4>
+        <p>
+          Empresas do setor financeiro recebem diariamente um alto volume de
+          e-mails, muitos deles sem relevância operacional imediata. Isso torna
+          o processo de triagem manual demorado e ineficiente.
+        </p>
+        <p>
+          O <strong>InteliMail</strong> foi desenvolvido para automatizar essa
+          etapa, identificando rapidamente os e-mails que exigem atenção e
+          sugerindo respostas apropriadas. Dessa forma, a equipe de atendimento
+          pode focar nos casos realmente importantes, reduzindo o retrabalho e
+          melhorando a produtividade.
+        </p>
+
+        <h4>Objetivos da aplicação</h4>
+        <ul>
+          <li>
+            Classificar automaticamente e-mails com base no conteúdo textual ou
+            em arquivos recebidos.
+          </li>
+          <li>Gerar uma resposta automática, clara e bem formulada.</li>
+          <li>Reduzir o esforço manual da equipe de atendimento.</li>
+          <li>Aumentar a agilidade na resposta aos clientes.</li>
+          <li>Manter um padrão de comunicação profissional.</li>
+        </ul>
+
+        <h4>Como funciona?</h4>
+        <p>O usuário pode:</p>
+        <ul>
+          <li>Escrever o conteúdo do e-mail diretamente no sistema;</li>
+          <li>Anexar um arquivo PDF ou TXT;</li>
+          <li>Ou utilizar as duas opções ao mesmo tempo.</li>
+        </ul>
+        <p>
+          O sistema interpreta o conteúdo, define a categoria (Produtivo ou
+          Improdutivo) e gera uma resposta adequada em poucos segundos, pronta
+          para ser utilizada.
+        </p>
+
+        <h4>Problemas com Tempo de Resposta?</h4>
+        <p>
+          Este projeto está hospedado gratuitamente na nuvem. Quando o servidor
+          fica inativo por um período, a primeira requisição após a inatividade
+          pode demorar alguns segundos ou até minutos a mais para responder,
+          pois o servidor está sendo ativado novamente.
+        </p>
+      </div>
     </div>
 
     <script src="script.js"></script>
